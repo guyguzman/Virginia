@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <script src="js/common.js"></script>
+    <script src="https://kit.fontawesome.com/094d621db1.js" crossorigin="anonymous"></script>
+    <title>Virinia Tourism</title>
+    <style>
+        :root {
+            --fullHeight: calc(var(--vh, 1vh) * 100);
+            --fullWidth: calc(var(--vw, 1vw) * 100);
+            --primaryColor: #364600;
+        }
+
+        @font-face {
+            font-family: 'Quattrocento-Regular';
+            src: url('fonts/Quattrocento/Quattrocento-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'QuattrocentoSans-Regular';
+            src: url('fonts/Quattrocento_Sans/QuattrocentoSans-Regular.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'QuattrocentoSans-Regular';
+        }
+
+        @font-face {
+            font-family: 'HelveticaBlack';
+            src: url('fonts/HelveticaNeueLTStd-Blk.otf') format("opentype");
+        }
+
+        @font-face {
+            font-family: 'RobotoFlex';
+            src: url('fonts/RobotoFlex.ttf')format("truetype");
+        }
+
+        .landingPage {
+            width: var(--fullWidth);
+            height: var(--fullHeight);
+            background-color: #c0c0c0;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            font-family: HelveticaBlack;
+            font-size: 50px;
+            color: #808080;
+        }
+
+        .main {
+            width: var(--fullWidth);
+            height: var(--fullHeight);
+            display: grid;
+            background-color: rgba(0, 0, 0, 0.5);
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 100px repeat(7, 1fr) 100px;
+            background-image: url('img/virginiahikingTrail.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-blend-mode: multiply;
+            ;
+        }
+
+        .header {
+            background-color: var(--primaryColor);
+            grid-column: 1/13;
+            grid-row: 1;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+        .headerIcon {
+            color: white;
+            grid-column: 1;
+            grid-row: 1;
+            align-self: center;
+            justify-self: start;
+            font-size: 36px;
+            margin-left: 40px;
+            text-transform: uppercase;
+        }
+
+        .headerTitle {
+            color: white;
+            grid-column: 2;
+            grid-row: 1;
+            align-self: center;
+            justify-self: center;
+            font-size: 60px;
+            font-family: Quattrocento-Regular
+        }
+
+        .headerMenu {
+            grid-column: 3;
+            grid-row: 1;
+            background-color: var(--primaryColor);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: end;
+            margin-right: 40px;
+        }
+
+        .headerMenuItem {
+            color: white;
+            font-size: 20px;
+        }
+
+        .headerLogo {}
+
+        .mainMessage {
+            grid-column: 2/6;
+            grid-row: 4/6;
+            width: 100%;
+            height: 100%;
+            /* backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.5); */
+            font-size: 20px;
+            line-height: 28px;
+            box-sizing: border-box;
+            padding: 20px;
+            overflow: hidden;
+            color: white;
+            display: grid;
+            align-items: center;
+            ;
+        }
+
+        .secondMessage {
+            grid-column: 8/12;
+            grid-row: 4/6;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            font-size: 60px;
+            line-height: 60px;
+            box-sizing: border-box;
+            padding: 20px;
+            overflow: hidden;
+            color: white;
+            font-family: Quattrocento-Regular
+        }
+
+        .mainImages {
+            grid-column: 2/12;
+            grid-row: 8/9;
+            display: flex;
+            gap: 30px;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .mainImage {
+            width: calc(200px);
+            height: calc(150px);
+            background-size: cover;
+            background-position: center center;
+            transition: transform 250ms ease-in-out;
+        }
+
+        .mainImage:hover {
+            transform: scale(1.2) translateY(-14px)
+        }
+
+        .footer {
+            background-color: var(--primaryColor);
+            display: flex;
+            grid-column: 1/13;
+            grid-row: 9;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="headerIcon">Virginia is for L<i style="color:red;font-size:30px;"
+                    class="fa-solid fa-heart"></i>vers
+            </div>
+            <div class="headerTitle">Summer in Virginia</div>
+            <div class="headerMenu">
+                <div class="headerMenuItem">Lodging</div>
+                <div class="headerMenuItem">Adventure Companies</div>
+
+                <div class="headerMenuItem">Contact</div>
+            </div>
+        </div>
+        <div class="mainMessage">
+            <div>
+                <div style="font-family: 'Quattrocento-Bold'; font-size: 36px; margin-bottom: 20px;">Natural Beauty
+                </div>
+                <div>"Virginia is for lovers" From the beaches to the mountains and everywhere in between, Virginia is
+                    the perfect destination for your next summer vacation. Pack up the kids for a memorable road trip
+                    and discover breathtaking scenery or simply
+                    relax and reconnect on a family lake vacation. Head west to the mountains for endless hiking,
+                    biking, water sports, and swimming holes to cool off after a big day of adventure.
+                </div>
+            </div>
+
+        </div>
+        <div class="secondMessage">
+            <div>No better place!</div>
+        </div>
+        <div class="mainImages">
+            <div class="mainImage" style="background-image:url('img/virginiaBeachSummer.jpg' )"></div>
+            <div class=" mainImage " style=" background-image:url( 'img/virginiaBlueRidgeOverviewFamily.jpg' )">
+            </div>
+            <div class="mainImage" style="background-image:url('img/virginiaCascadeWaterfall.jpg' )"></div>
+            <div class="mainImage" style="background-image:url('img/virginiaCoupleWalkingWoodenPath.jpg' )"></div>
+            <div class="mainImage" style="background-image:url('img/virginiaBeachSunrise.png' )"></div>
+        </div>>
+
+        <div class=" footer ">Visit www.virginia.org for more information</div>
+    </div>
+</body>
+
+</html>
